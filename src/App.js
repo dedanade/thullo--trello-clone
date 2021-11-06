@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/index.scss';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import AllBoards from './Components/Boards/AllBoards';
+import Footer from './Components/Footer/Footer';
+import ViewBoard from './Components/Boards/ViewBoard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/board/:title/:id' component={ViewBoard} />
+        <Route exact path='/boards' component={AllBoards} />
+        {/* <Route path='/register' component /> */}
+        <Route path='/' component={AllBoards} />
+        <Redirect to='/boards' />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

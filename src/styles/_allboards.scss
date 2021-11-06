@@ -1,0 +1,126 @@
+section.all-boards-container {
+  padding: 70px 185px 20px 186px;
+  min-height: 100vh;
+  & .all-boards__title-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+    & .all-boards__title {
+      font-size: 18px;
+      line-height: 27px;
+      color: $Gray1;
+    }
+    button.all-boards__btn {
+      padding-left: 14.33px;
+    }
+    .boards-add_btn {
+      display: flex;
+      align-items: center;
+      & svg {
+        height: 100%;
+        width: 14.5px;
+        margin-right: 3.5px;
+      }
+    }
+    .boards-add__text {
+      font-size: 10px;
+      line-height: 15px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+
+  .all-boards {
+    & .card-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 42px;
+      column-gap: 42px;
+      .boards-card-content {
+        cursor: pointer;
+        .board-card__img {
+          width: 100%;
+          height: 130px;
+          margin-bottom: 12px;
+          img {
+            border-radius: 12px;
+          }
+        }
+        .board-name__header {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 22px;
+          color: #000000;
+          width: 180px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-bottom: 21px;
+        }
+        .board-members {
+          .all-board-members_card {
+            &:last-child {
+              margin-right: 12px;
+            }
+          }
+          .board-members__p {
+            font-size: 12px;
+            line-height: 16px;
+            color: $Gray4;
+          }
+        }
+      }
+    }
+  }
+}
+
+.add-board-content {
+  .add-modal-img {
+    position: relative;
+    width: 259px;
+    height: 78px;
+    margin-bottom: 10px;
+    img {
+      border-radius: 8px;
+    }
+    .cancel-modal__span {
+      position: absolute;
+      right: -17px;
+      top: -7px;
+      padding: 8px 9.4px 10px 9.4px;
+      svg {
+        height: 14px;
+        width: 13.2px;
+      }
+    }
+  }
+  input.form-control {
+    margin-bottom: 20px;
+  }
+  .add-board-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    button {
+      padding: 7px 46px 7px 17.5px;
+      svg {
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+  .modal-button-options {
+    button {
+      padding: 8px 14px 7px 8.33px;
+    }
+    .btn_svg__flex {
+      svg {
+        height: 9.33px;
+        width: 9.33px;
+        margin-right: 5px;
+      }
+    }
+  }
+}
