@@ -4,11 +4,15 @@ import { ReactComponent as SMALL_LOGO } from '../../images/Logo-small.svg';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { NavLink } from 'react-router-dom';
 import ViewModuleIcon from '@mui/icons-material/ViewModule';
+import { useSelector } from 'react-redux';
+import { useHistory } from 'react-router';
 
-function Header({ boarddName }) {
+function Nav({ boarddName }) {
+  const user = useSelector((state) => state.user.user);
+  const history = useHistory();
   return (
-    <header className='thullo-header'>
-      <nav>
+    <nav className='thullo-nav'>
+      <div>
         <div className='logo_board-name'>
           <NavLink to='/'>
             <span className='thullo-logo__bg'>
@@ -22,9 +26,12 @@ function Header({ boarddName }) {
           </NavLink>
           {boarddName && (
             <div className='extra-header'>
-              <p className='extra-header__p'> DevChalenges Board</p>
+              <p className='extra-header__p'> {boarddName}</p>
               <span className='extra-header__line'></span>
-              <button className='btn btn_svg__flex'>
+              <button
+                onClick={() => history.push('/')}
+                className='btn btn_svg__flex'
+              >
                 <ViewModuleIcon /> <span>All board</span>
               </button>
             </div>
@@ -41,19 +48,15 @@ function Header({ boarddName }) {
           </div>
           <div className='header-profile'>
             <div className='header-profile__img'>
-              <img
-                src='https://avatars.githubusercontent.com/u/66811981?v=4'
-                alt=''
-                className='img-cover'
-              />
+              <img src={user.avatar} alt='' className='img-cover' />
             </div>
-            <p className='header-profile__name'>Daniel Adebonojo</p>
+            <p className='header-profile__name'>{user.name}</p>
             <ArrowDropDownIcon />
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
   );
 }
 
-export default Header;
+export default Nav;

@@ -1,4 +1,4 @@
-.thullo-header {
+.thullo-nav {
   position: sticky;
   padding: 20px 29.7px 12px 23px;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05);
@@ -7,7 +7,7 @@
   z-index: 10;
   background: white;
 
-  & nav {
+  & div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,11 +31,19 @@
           margin: 0px 24px;
           display: block;
         }
+        .btn_svg__flex {
+          fill: #828282;
+        }
       }
     }
     & .header_search_profile {
       display: flex;
       align-items: center;
+
+      .btn {
+        width: 74px;
+        height: 30px;
+      }
     }
   }
   .header-profile {

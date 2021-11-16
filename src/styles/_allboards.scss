@@ -1,4 +1,4 @@
-section.all-boards-container {
+main.all-boards-container {
   padding: 70px 185px 20px 186px;
   min-height: 100vh;
   & .all-boards__title-btn {
@@ -12,22 +12,17 @@ section.all-boards-container {
       color: $Gray1;
     }
     button.all-boards__btn {
-      padding-left: 14.33px;
-    }
-    .boards-add_btn {
-      display: flex;
-      align-items: center;
-      & svg {
-        height: 100%;
-        width: 14.5px;
-        margin-right: 3.5px;
-      }
-    }
-    .boards-add__text {
+      width: 64px;
+      height: 30px;
       font-size: 10px;
       line-height: 15px;
-      text-align: center;
-      color: #ffffff;
+      font-family: 'Poppins';
+      padding: 0;
+      svg {
+        height: 9.33px;
+        width: 9.33px;
+        margin-right: 7.33px;
+      }
     }
   }
 
@@ -88,7 +83,8 @@ section.all-boards-container {
       position: absolute;
       right: -17px;
       top: -7px;
-      padding: 8px 9.4px 10px 9.4px;
+      width: 32px;
+      height: 32px;
       svg {
         height: 14px;
         width: 13.2px;
@@ -103,8 +99,17 @@ section.all-boards-container {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 22px;
-    button {
-      padding: 7px 46px 7px 17.5px;
+    .add-board__privacy {
+      position: relative;
+      .mini-pop-modal {
+        top: 36px;
+      }
+    }
+    button.btn {
+      width: 120px;
+      height: 32px;
+      padding-right: 46px;
+      padding-left: 7px;
       svg {
         width: 9px;
         height: 9px;
@@ -114,6 +119,8 @@ section.all-boards-container {
   .modal-button-options {
     button {
       padding: 8px 14px 7px 8.33px;
+      width: 76px;
+      height: 30px;
     }
     .btn_svg__flex {
       svg {
