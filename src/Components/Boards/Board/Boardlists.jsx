@@ -78,7 +78,7 @@ function Boardlists({
                   />
 
                   {provided.placeholder}
-                  {Object.keys(placeholderProps).length &&
+                  {Object.keys(placeholderProps).length > 0 &&
                     snapshot.isDraggingOver && (
                       <div
                         className='placeholder'
